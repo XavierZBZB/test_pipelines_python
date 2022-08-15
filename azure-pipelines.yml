@@ -35,3 +35,8 @@ steps:
     pytest
   displayName: 'pytest'
   
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'python_test_20220815'
+    publishLocation: 'pipeline'
